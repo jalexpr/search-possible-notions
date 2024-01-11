@@ -6,16 +6,25 @@
 
     <name>TAWT Search Possible Notions</name>
     <artifactId>search-possible-notions</artifactId>
+    <packaging>jar</packaging>
     <version>${version.tawt.search-possible-notions}</version>
     
     <parent>
         <groupId>ru.textanalysis.tawt</groupId>
         <artifactId>tawt-parent</artifactId>
-        <version>0.0.3</version>
+        <version>3.0.0</version>
     </parent>
 
     <dependencies>
         <!--        TAWT-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>morphological-structures</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>morphological-dictionary</artifactId>
+        </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>syntactic-parser</artifactId>
@@ -29,6 +38,13 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <!--            lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!--            JUnit-->
